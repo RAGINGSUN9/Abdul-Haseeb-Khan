@@ -3,7 +3,7 @@ name: Deploy Portfolio to GitHub Pages
 on:
   push:
     branches:
-      - main # Change this if your default branch is master
+      - main 
 
 permissions:
   contents: read
@@ -39,7 +39,7 @@ jobs:
       - name: Upload static files artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Vite builds static assets here
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
